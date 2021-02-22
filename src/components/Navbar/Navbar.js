@@ -2,21 +2,20 @@ import React from 'react'
 import './Navbar.css'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div className="Navbar">
+        <Link to='/'>
+            <img className="NavbarLogo" src="./logo.png" alt='' />
+        </Link>
             
-            {/* Logo */}
-            <img className="NavbarLogo" src="./logo.png"/>
-            
-            {/* SearchBar */}
             <div className="NavbarSearch">
             <input type="text" className="NavbarSearchBar"/>
             <SearchIcon className="NavbarSearchIcon" />
             </div>
             
-            {/* Sub Buttons */}
             <div className="NavbarSub">
                 <div className="NavbarOptions">
                     <span className="OptionLineOne">Hello Guest</span>
@@ -28,10 +27,12 @@ const Navbar = () => {
                     <span className="OptionLineTwo"> & Orders </span>    
                 </div>
 
+                <Link to='/checkout'>
                 <div className="NavbarCart">
-                    <ShoppingCartIcon />
-                    <span className="OptionLineTwo NavbarCartCount">0</span>
+                <ShoppingCartIcon />
+                <span className="OptionLineTwo NavbarCartCount">0</span>
                 </div>
+                </Link>
 
             </div>
 

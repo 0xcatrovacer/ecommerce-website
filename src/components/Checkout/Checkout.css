@@ -1,0 +1,20 @@
+.Checkout {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+  justify-content: space-between;
+}
+
+.CheckoutLeft {
+  width: 60%;
+}
+
+.CheckoutTitle {
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  font-size: 20px;
+}
