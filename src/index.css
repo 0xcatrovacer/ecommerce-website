@@ -4,3 +4,7 @@
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
 }
+
+body {
+  background-color: rgb(226, 226, 226);
+}
