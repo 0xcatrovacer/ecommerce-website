@@ -5,6 +5,7 @@
   background-color: white;
   height: max-content;
   justify-content: space-between;
+  z-index: -2;
 }
 
 .CheckoutLeft {
