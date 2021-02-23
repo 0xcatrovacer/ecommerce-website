@@ -13,7 +13,7 @@ const Checkout = () => {
                 <div>
                     <h2 className="CheckoutTitle">Your Shopping Cart</h2>
                 </div>
-                {cart.map(item => (
+                {cart.map((item) => (
                     <CheckoutProduct 
                     image = {item.image}
                     title = {item.title}
