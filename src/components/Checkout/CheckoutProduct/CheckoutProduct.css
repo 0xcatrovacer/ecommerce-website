@@ -1,0 +1,31 @@
+.CheckoutProduct {
+  display: flex;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
+
+.CheckoutProduct:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.CheckoutProduct img {
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.CheckoutProductInfo {
+  padding-left: 20px;
+}
+
+.CheckoutProductTitle {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.CheckoutProductInfo button {
+  background: rgb(99, 207, 99);
+  margin-top: 10px;
+  border: 1px solid black;
+  color: black;
+}
