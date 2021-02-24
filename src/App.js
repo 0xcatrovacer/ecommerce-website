@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Checkout from "./components/Checkout/Checkout";
 import Signin from "./components/Signin/Signin";
+import Payment from "./components/Payment/Payment";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -46,6 +47,10 @@ const App = () => {
 
           <Route path='/signin'>
             <Signin />
+          </Route>
+
+          <Route path='/payment'>
+            <Payment />
           </Route>
 
         </Switch>
