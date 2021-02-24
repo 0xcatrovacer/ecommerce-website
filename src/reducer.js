@@ -1,10 +1,11 @@
 export const initialState = {
     cart: [],
+    user: null
 };
 
 const reducer = (state, action) => {
 
-    switch(action.type) {
+    switch (action.type) {
         case 'ADD_TO_CART':
             return {
                 ...state,
@@ -16,7 +17,7 @@ const reducer = (state, action) => {
             );
             let newCart = [...state.cart];
 
-            if( index >= 0 ) {
+            if (index >= 0) {
                 newCart.splice(index, 1);
             } else {
                 console.warn(
@@ -27,6 +28,11 @@ const reducer = (state, action) => {
                 ...state,
                 cart: newCart
             };
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            }
 
         default:
             return state;
