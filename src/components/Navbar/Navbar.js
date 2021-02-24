@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="NavbarSub">
                 <Link to={!user && '/signin'} style={{ textDecoration: 'none' }}>
                     <div onClick={handleAuth} className="NavbarOptions">
-                        <span className="OptionLineOne">Hello Guest</span>
+                        <span className="OptionLineOne">Hello {user ? user.email : 'Guest'}</span>
                         <span className="OptionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
