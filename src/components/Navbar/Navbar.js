@@ -34,7 +34,7 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <Link to={'/orders'} style={{ textDecoration: 'none' }}>
+                <Link to='/orders' style={{ textDecoration: 'none' }}>
                     <div className="NavbarOptions">
                         <span className="OptionLineOne">Returns</span>
                         <span className="OptionLineTwo"> & Orders </span>
