@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import Checkout from "./components/Checkout/Checkout";
 import Signin from "./components/Signin/Signin";
 import Payment from "./components/Payment/Payment";
+import Orders from "./components/Payment/Orders/Orders";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useEffect } from "react";
@@ -62,6 +63,11 @@ const App = () => {
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+          </Route>
+
+          <Route path='/orders'>
+            <Navbar />
+            <Orders />
           </Route>
 
         </Switch>

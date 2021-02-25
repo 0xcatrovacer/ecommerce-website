@@ -5,8 +5,9 @@ import CheckoutProduct from '../Checkout/CheckoutProduct/CheckoutProduct';
 import './Payment.css'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
-import axios from 'axios';
+import axios from '../../axios';
 import { getCartTotal } from '../../reducer';
+import { db } from '../../firebase';
 
 const Payment = () => {
     const [{ cart, user }, dispatch] = useStateValue();
@@ -36,6 +37,8 @@ const Payment = () => {
 
     }, [cart])
 
+    console.log(clientSecret)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setProcessing(true);
@@ -45,9 +48,20 @@ const Payment = () => {
                 card: elements.getElement(CardElement)
             }
         }).then(({ paymentIntent }) => {
+
+            db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id).set({
+                cart: cart,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+
             setSucceeded(true);
             setError(null)
             setProcessing(false)
+
+            dispatch({
+                type: 'EMPTY_CART'
+            })
 
             history.replace('/orders')
         })
