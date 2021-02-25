@@ -26,3 +26,22 @@
 .PaymentDetails {
   flex: 0.8;
 }
+
+.PaymentDetails form {
+  max-width: 400px;
+}
+
+.PaymentDetails h4 {
+  padding-bottom: 20px;
+}
+
+.PaymentDetails form div button {
+  background: #fab999;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  font-weight: bolder;
+  margin-top: 10px;
+  color: black;
+}

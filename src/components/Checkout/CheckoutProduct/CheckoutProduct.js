@@ -2,7 +2,7 @@ import React from 'react'
 import { useStateValue } from '../../../StateProvider'
 import './CheckoutProduct.css'
 
-const CheckoutProduct = ( {image, title, price, rating} ) => {
+const CheckoutProduct = ({ image, title, price, rating, hideButton }) => {
     const [{ cart }, dispatch] = useStateValue();
 
     const removeFromCart = () => {
@@ -14,7 +14,7 @@ const CheckoutProduct = ( {image, title, price, rating} ) => {
 
     return (
         <div className="CheckoutProduct">
-            <img className="CheckoutProductImage" src={image} alt=""/>
+            <img className="CheckoutProductImage" src={image} alt="" />
             <div className="CheckoutProductInfo">
                 <p className="CheckoutProductTitle">{title}</p>
                 <p className="CheckoutProductPrice">
@@ -26,9 +26,10 @@ const CheckoutProduct = ( {image, title, price, rating} ) => {
                         .fill()
                         .map((_, i) => (
                             <span>&#11088;</span>
-                    ))}
+                        ))}
                 </div>
-                <button onClick={removeFromCart}>Remove from Cart</button>    
+                {!hideButton && (<button onClick={removeFromCart}>Remove from Cart</button>
+                )}
             </div>
         </div>
     )

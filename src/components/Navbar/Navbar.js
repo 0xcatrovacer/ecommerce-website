@@ -34,10 +34,12 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <div className="NavbarOptions">
-                    <span className="OptionLineOne">Requests</span>
-                    <span className="OptionLineTwo"> & Orders </span>
-                </div>
+                <Link to={'/orders'} style={{ textDecoration: 'none' }}>
+                    <div className="NavbarOptions">
+                        <span className="OptionLineOne">Returns</span>
+                        <span className="OptionLineTwo"> & Orders </span>
+                    </div>
+                </Link>
 
                 <Link to='/checkout'>
                     <div className="NavbarCart">

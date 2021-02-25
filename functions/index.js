@@ -30,5 +30,3 @@ app.post('/payments/create', async (req, res) => {
 
 // Listen command
 exports.api = functions.https.onRequest(app)
-
-// 'http://localhost:5001/ecommerce-store-f7204/us-central1/api'
