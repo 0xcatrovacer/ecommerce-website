@@ -37,7 +37,7 @@ const reducer = (state, action) => {
                 user: action.user
             }
 
-        case 'EMPTY BASKET':
+        case "EMPTY_CART":
             return {
                 ...state,
                 cart: []

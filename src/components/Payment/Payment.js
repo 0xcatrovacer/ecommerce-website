@@ -60,7 +60,7 @@ const Payment = () => {
             setProcessing(false)
 
             dispatch({
-                type: 'EMPTY_CART'
+                type: 'EMPTY_CART',
             })
 
             history.replace('/orders')
