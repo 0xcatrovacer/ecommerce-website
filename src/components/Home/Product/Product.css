@@ -10,6 +10,12 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  transition: transform 0.5s;
+}
+
+.Product:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px black;
 }
 
 .ProductInfo {
@@ -34,4 +40,11 @@
   margin-top: 10px;
   color: black;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Product button:hover {
+  background-color: rgba(0, 0, 0);
+  color: #fab999;
 }
